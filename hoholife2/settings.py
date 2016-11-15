@@ -41,7 +41,11 @@ INSTALLED_APPS = [
     'django_comments',
     'mptt',
     'tagging',
+    'ckeditor_uploader',
+    'ckeditor',
+    # 'ckeditor_demo.demo_application',
     'zinnia',
+    'zinnia_ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +130,38 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_IMAGE_BACKEND = 'pillow'
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+# CKEDITOR_JQUERY_URL = 'js/jquery.min-2.1.1.js'
+
+SITE_ID = 1
+
+CKEDITOR_CONFIGS = {
+    'zinnia-content': {
+        'toolbar_Zinnia': [
+            ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord'],
+            ['Undo', 'Redo'],
+            ['Scayt'],
+            ['Link', 'Unlink', 'Anchor'],
+            ['Image', 'Table', 'HorizontalRule', 'SpecialChar'],
+            ['CodeSnippet', 'Source'],
+            ['Maximize'],
+            '/',
+            ['Bold', 'Italic', 'Underline', 'Strike',
+             'Subscript', 'Superscript', '-', 'RemoveFormat'],
+            ['NumberedList', 'BulletedList', '-',
+             'Outdent', 'Indent', '-', 'Blockquote'],
+            ['Styles', 'Format'],
+        ],
+        'toolbar': 'Zinnia',
+        'extraPlugins': 'widget,lineutils,codesnippet,codemirror,selectall',
+        'codeSnippet_theme': 'monokai_sublime',  # solarized_light tomorrow_night_eighties
+        # 'skin': 'moono-dark',
+    },
+}
+
