@@ -93,8 +93,8 @@ DATABASES = {
 
     'default': {
     'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'gthcn',    #你的数据库名称
-    'USER': 'dbusitisasecret' #数据库用户名
+    'NAME': 'hoholife',    #你的数据库名称
+    'USER': 'dbushoholife' #数据库用户名
     'PASSWORD': 'pntmdcg_game', #你的数据库密码
     'HOST': '', #你的数据库主机，留空默认为localhost
     'PORT': '3306', #你的数据库端口
