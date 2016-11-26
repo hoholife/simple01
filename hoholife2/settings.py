@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'znr0j=goi&#2bq9i*qp_%o%3++qiup^f$%-@nobk$9kn@$oxb)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','www.simple01.com','simple01.com']
 
 
 # Application definition
@@ -89,7 +89,15 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    },
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'simple01',
+        'USER': 'dbuser',
+        'PASSWORD': 'pntmdcg_game',
+        'HOST': '',
+        'PORT': '3306',
+    },
 }
 
 
