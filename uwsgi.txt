@@ -1,0 +1,1 @@
+uwsgi --socket :8002 --home /website/simple01/ --chdir /website/simple01/simple01/ --static-map /static=/website/simple01/simple01/static/ --module hoholife2.wsgi
