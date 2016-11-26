@@ -25,7 +25,7 @@ SECRET_KEY = 'znr0j=goi&#2bq9i*qp_%o%3++qiup^f$%-@nobk$9kn@$oxb)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.simple01.com','simple01.com']
+ALLOWED_HOSTS = ['127.0.0.1','www.simple01.com','simple01.com']
 
 
 # Application definition
@@ -94,10 +94,14 @@ DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.mysql',
     'NAME': 'hoholife',
-    'USER': 'dbushoholife',
-    'PASSWORD': 'pntmdcg_game',
-    'HOST': '',
-    'PORT': '3306',
+    },
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'simple01',
+        'USER': 'dbuser',
+        'PASSWORD': 'pntmdcg_game',
+        'HOST': '',
+        'PORT': '3306',
     },
 }
 
@@ -201,12 +205,9 @@ DATABASES = {
     #},
     'default': {
     'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'gthcn',    #你的数据库名称
-    'USER': 'dbuser',   #你的数据库用户名
-    'PASSWORD': 'pntmdcg_game', #你的数据库密码
-    'HOST': '', #你的数据库主机，留空默认为localhost
-    'PORT': '3306', #你的数据库端口
-    },
+    'NAME': 'gthcn',    #你的数据库名�    'USER': 'dbuser',   #你的数据库用户名
+    'PASSWORD': 'pntmdcg_game', #你的数据库密�    'HOST': '', #你的数据库主机，留空默认为localhost
+    'PORT': '3306', #你的数据库端�    },
 }
 
 
@@ -244,12 +245,11 @@ USE_TZ = True
 
 LANGUAGES = (
     ('en', ('English')),
-    ('zh-hans', ('中文简体')),
+    ('zh-hans', ('中文简�)),
     ('zh-hant', ('中文繁體')),
 )
 
-#翻译文件所在目录，需要手工创建
-LOCALE_PATHS = (
+#翻译文件所在目录，需要手工创�LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
 
@@ -279,9 +279,7 @@ DEFAULT_FROM_EMAIL = '女神复兴<admin@gthcn.com>'  # EMAIL_HOST_USER
 
 CAPTCHA_NOISE_FUNCTIONS = (
 'captcha.helpers.noise_null', # 没有样式
-#'captcha.helpers.noise_arcs', # 线
-# 'captcha.helpers.noise_dots', # 点
-)
+#'captcha.helpers.noise_arcs', # �# 'captcha.helpers.noise_dots', # �)
 CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.math_challenge'
 CAPTCHA_LETTER_ROTATION = (-1,1)
 CAPTCHA_IMAGE_SIZE = (88,30)
@@ -308,8 +306,7 @@ MAX_USER_AMOUNT_PER_EMAIL = 3
 
 POST_INTERVAL_AFTER_UNFINISHED_ORDER = 600
 
-# 未完成订单的最大数量
-MAX_UNFINISHED_ORDER_AMOUNT = 3
+# 未完成订单的最大数�MAX_UNFINISHED_ORDER_AMOUNT = 3
 
 RESET_PASSWORD_TIMES_PER_DAY = 3
 
